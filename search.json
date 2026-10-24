@@ -1,0 +1,18 @@
+---
+layout: null
+permalink: /search.json
+sitemap: false
+---
+{%- assign searchable_posts = site.posts | where_exp: "post", "post.search != false" -%}
+[
+{%- for post in searchable_posts -%}
+  {
+    "title": {{ post.title | markdownify | strip_html | normalize_whitespace | jsonify }},
+    "url": {{ post.url | relative_url | jsonify }},
+    "date": {{ post.date | date: '%Y-%m-%d' | jsonify }},
+    "tags": {{ post.tags | join: ' ' | jsonify }},
+    "categories": {{ post.categories | join: ' ' | jsonify }},
+    "content": {{ post.content | markdownify | strip_html | normalize_whitespace | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]

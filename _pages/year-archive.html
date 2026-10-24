@@ -8,6 +8,22 @@ redirect_from:
 ---
 
 {% include base_path %}
+
+<section class="blog-search" data-blog-search data-index-url="{{ '/search.json' | relative_url }}" hidden>
+  <form class="blog-search__form" role="search">
+    <label for="blog-search-input">搜索博客</label>
+    <div class="blog-search__controls">
+      <input id="blog-search-input" type="search" name="q" placeholder="输入关键词…" autocomplete="off" aria-describedby="blog-search-help" aria-controls="blog-search-results">
+      <button class="blog-search__clear" type="button" disabled>清空</button>
+    </div>
+    <p id="blog-search-help" class="blog-search__help">搜索标题、正文、标签和分类，多个关键词用空格分隔。</p>
+  </form>
+  <p class="blog-search__status" role="status" aria-live="polite" aria-atomic="true"></p>
+  <div id="blog-search-results" class="blog-search__results" hidden></div>
+</section>
+<noscript><p>启用 JavaScript 后可搜索博客，或直接浏览下方文章。</p></noscript>
+
+<div id="blog-archive">
 {% capture written_year %}'None'{% endcapture %}
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -17,3 +33,6 @@ redirect_from:
   {% endif %}
   {% include archive-single.html %}
 {% endfor %}
+</div>
+
+<script src="{{ '/assets/js/blog-search.js' | relative_url }}" defer></script>
