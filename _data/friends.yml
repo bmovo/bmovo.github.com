@@ -7,18 +7,12 @@
       descr: 密码学
       siteshot: /images/friends/dexter_ss.jpg
       image: /images/friends/thumbs/dexter_ss.jpg
-    - name: 127.0.0.1
+    - name: coperlm
       link: https://coperlm.github.io/
       avatar: https://coperlm.github.io/img/nl.jpg
       descr: 密码学
       siteshot: /images/friends/loc_ss.jpg
       image: /images/friends/thumbs/loc_ss.jpg
-    - name: 旦旦仔
-      link: https://bmovo.top
-      avatar: /images/friends/ddz_avt.jpg
-      descr: 密码学大神（但是好像还没搭好）
-      siteshot:
-      image: /images/friends/thumbs/ddz_avt.jpg
     - name: MOwORN
       link: https://moworn.github.io/
       avatar: https://moworn.github.io/images/avatar.png
