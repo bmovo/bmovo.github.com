@@ -7,58 +7,18 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
-
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<section class="cv-timeline" aria-label="教育与任职经历">
+  <ol class="cv-timeline__list" role="list">
+    {% for experience in site.data.cv.experiences %}
+    <li class="cv-timeline__item">
+      <article class="cv-timeline__card">
+        <div class="cv-timeline__meta">
+          <span class="cv-timeline__period">{{ experience.period | escape }}</span>
+          <span class="cv-timeline__type">{{ experience.type | escape }}</span>
+        </div>
+        <h2 class="cv-timeline__description"><span class="cv-timeline__organization">{{ experience.organization | escape }}</span><span class="cv-timeline__separator">@</span><span class="cv-timeline__detail">{{ experience.detail | escape }}</span></h2>
+      </article>
+    </li>
+    {% endfor %}
+  </ol>
+</section>

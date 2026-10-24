@@ -1,0 +1,20 @@
+experiences:
+  - period: "2018-2022"
+    type: "教育经历"
+    organization: "福建师范大学"
+    detail: "计算机科学与技术"
+
+  - period: "2022-2023"
+    type: "任职经历"
+    organization: "北京计算机技术及应用研究所"
+    detail: "安全研发工程师"
+
+  - period: "2024-2026"
+    type: "教育经历"
+    organization: "中国科学院信息工程研究所"
+    detail: "网络与信息安全"
+
+  - period: "2026-now"
+    type: "教育经历"
+    organization: "中国科学院信息工程研究所"
+    detail: "网络空间安全"

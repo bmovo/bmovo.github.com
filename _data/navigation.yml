@@ -19,6 +19,9 @@ main:
 
   - title: "碎碎念"
     url: /talks/ 
+
+  - title: "友链"
+    url: /friends/
     
   - title: "Guide"
     url: /markdown/

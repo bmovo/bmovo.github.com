@@ -1,0 +1,62 @@
+---
+layout: default
+title: "友链"
+permalink: /friends/
+description: "朋友们的博客：密码学、网络安全与技术分享。"
+author_profile: false
+---
+
+{% assign friend_count = 0 %}
+{% for group in site.data.friends %}
+  {% assign friend_count = friend_count | plus: group.link_list.size %}
+{% endfor %}
+
+<main id="main" class="friends-page">
+  <section class="friends" data-friends aria-labelledby="friends-title">
+    <header class="friends__intro">
+      <p class="friends__eyebrow">FRIENDS</p>
+      <h1 id="friends-title" class="page__title">友链</h1>
+      <p class="friends__summary">一些朋友的博客，关于密码学、安全与技术。点选一个节点，去朋友的博客坐坐。</p>
+    </header>
+
+    <div class="friends__toolbar" hidden>
+      <div class="friends__filters" role="group" aria-label="按领域筛选友链">
+        <button type="button" class="friends__filter" data-friend-filter="" aria-pressed="true">全部 <span class="friends__filter-count">{{ friend_count }}</span></button>
+        {% for group in site.data.friends %}
+        <button type="button" class="friends__filter" data-friend-filter="{{ group.class_name | escape }}" aria-pressed="false" title="{{ group.class_desc | escape }}">{{ group.class_name | escape }} <span class="friends__filter-count">{{ group.link_list.size }}</span></button>
+        {% endfor %}
+      </div>
+      <button type="button" class="friends__motion" aria-pressed="false">暂停漂浮</button>
+    </div>
+
+    <p class="friends__count" role="status" aria-live="polite" aria-atomic="true">{{ friend_count }} 个站点 · {{ site.data.friends.size }} 个分类</p>
+
+    <div class="friends__stage" data-friends-stage aria-label="友链节点">
+      <div class="friends__ambient" aria-hidden="true"></div>
+      <ul class="friends__nodes" role="list">
+        {% for group in site.data.friends %}
+          {% assign group_index = forloop.index0 %}
+          {% for friend in group.link_list %}
+        <li class="friends__node" data-friend-category="{{ group.class_name | escape }}">
+          <a class="friends__link" href="{{ friend.link | escape }}" target="_blank" rel="noopener noreferrer" aria-describedby="friend-detail-{{ group_index }}-{{ forloop.index0 }}">
+            <span class="friends__portrait">
+              <img class="friends__image" src="{{ friend.image | relative_url }}" width="240" height="240" alt="" loading="lazy" decoding="async">
+              <span class="friends__initial" hidden>{{ friend.name | slice: 0, 1 | upcase | escape }}</span>
+            </span>
+            <span class="friends__name">{{ friend.name | escape }}</span>
+            <span class="sr-only">（在新标签页打开）</span>
+          </a>
+          <div id="friend-detail-{{ group_index }}-{{ forloop.index0 }}" class="friends__detail" role="tooltip">
+            <strong>{{ friend.name | escape }}</strong>
+            <span>{{ group.class_name | escape }}</span>
+            <p>{{ friend.descr | escape }}</p>
+          </div>
+        </li>
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</main>
+
+<script src="{{ '/assets/js/friends.js' | relative_url }}" defer></script>

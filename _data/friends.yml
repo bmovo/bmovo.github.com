@@ -1,0 +1,150 @@
+- class_name: Cryptography
+  class_desc: 密码学相关
+  link_list:
+    - name: dexterJie
+      link: https://dexterjie.github.io/
+      avatar: https://dexterjie.github.io/images/0.jpg
+      descr: 密码学
+      siteshot: /images/friends/dexter_ss.jpg
+      image: /images/friends/thumbs/dexter_ss.jpg
+    - name: 127.0.0.1
+      link: https://coperlm.github.io/
+      avatar: https://coperlm.github.io/img/nl.jpg
+      descr: 密码学
+      siteshot: /images/friends/loc_ss.jpg
+      image: /images/friends/thumbs/loc_ss.jpg
+    - name: 旦旦仔
+      link: https://bmovo.top
+      avatar: /images/friends/ddz_avt.jpg
+      descr: 密码学大神（但是好像还没搭好）
+      siteshot:
+      image: /images/friends/thumbs/ddz_avt.jpg
+    - name: MOwORN
+      link: https://moworn.github.io/
+      avatar: https://moworn.github.io/images/avatar.png
+      descr: 超强大佬竟在我身边~
+      siteshot: /images/friends/mo_ss.jpg
+      image: /images/friends/thumbs/mo_av.jpg
+    - name: sherlocky7y
+      link: https://sherlocky7y.github.io/
+      avatar: https://sherlocky7y.github.io/images/avatar.jpg
+      descr: 看起来也是个大佬
+      siteshot: /images/friends/sh_ss.png
+      image: /images/friends/thumbs/sh_ss.jpg
+
+- class_name: Web安全/渗透
+  class_desc: Web安全与渗透测试
+  link_list:
+    - name: c1oudfl0w0
+      link: https://c1oudfl0w0.github.io/blog/
+      avatar: https://c1oudfl0w0.github.io/blog/images/croppedImage_cropped.jpg
+      descr: Web安全
+      siteshot: /images/friends/0w0_ss.jpg
+      image: /images/friends/thumbs/0w0_ss.jpg
+    - name: sun-zzz
+      link: https://sun-zzz.github.io/
+      avatar: https://sun-zzz.github.io/images/1.jpg
+      descr: Web安全
+      siteshot: /images/friends/sz_ss.jpg
+      image: /images/friends/thumbs/sz_ss.jpg
+    - name: noone40404
+      link: https://noone40404.github.io/
+      avatar: /images/friends/nn_at.jpg
+      descr: Web安全
+      siteshot: /images/friends/nn_ss.jpg
+      image: /images/friends/thumbs/nn_at.jpg
+    - name: haicaji
+      link: https://haicaji.github.io/
+      avatar: /images/friends/hc_at.jpg
+      descr: 被查水表部
+      siteshot: /images/friends/hc_ss.jpg
+      image: /images/friends/thumbs/hc_at.jpg
+    - name: 美咕噜
+      link: https://0d000721999.github.io/
+      avatar: /images/friends/yz_at.jpg
+      descr: Web安全
+      siteshot: /images/friends/yz_ss.jpg
+      image: /images/friends/thumbs/yz_at.jpg
+    - name: ssuns3t
+      link: https://ssuns3t.github.io/
+      avatar: /images/friends/or_at.jpg
+      descr: Web安全
+      siteshot: /images/friends/or_ss.jpg
+      image: /images/friends/thumbs/or_at.jpg
+
+- class_name: 二进制安全
+  class_desc: PWN/RE糕守
+  link_list:
+    - name: c12en
+      link: https://www.c12en.top/
+      avatar: https://blog-1259781238.cos.ap-nanjing.myqcloud.com/202309142232390.png
+      descr: PWN
+      siteshot: /images/friends/C1_ss.jpg
+      image: /images/friends/thumbs/C1_ss.jpg
+    - name: GNchen1
+      link: https://gnchen1.github.io/
+      avatar: https://raw.githubusercontent.com/C17zz/Pages/main/Img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709170756.jpg
+      descr: PWN
+      siteshot: /images/friends/ch_ss.jpg
+      image: /images/friends/thumbs/ch_ss.jpg
+    - name: Lain
+      link: https://qmeimei10086.github.io/
+      avatar: https://qmeimei10086.github.io/img/avatar.png
+      descr: RE糕守
+      siteshot: /images/friends/lain_ss.png
+      image: /images/friends/thumbs/lain_ss.jpg
+
+- class_name: 技术大佬
+  class_desc: 全栈开发与技术分享
+  link_list:
+    - name: 巨魔！！！
+      link: https://treasure-house.randark.site/
+      avatar: https://treasure-house.randark.site/img/logo.jpg
+      descr: 全栈大神
+      siteshot: /images/friends/jm_ss.jpg
+      image: /images/friends/thumbs/jm_ss.jpg
+    - name: by学长
+      link: https://www.undefiner.cn/
+      avatar: https://www.undefiner.cn/upload/1.jpg
+      descr: 技术大佬
+      siteshot: /images/friends/by_ss.jpg
+      image: /images/friends/thumbs/by_ss.jpg
+    - name: 流风
+      link: https://blog.dich.bid
+      avatar: /images/friends/lf_at.jpg
+      descr: 技术大佬
+      siteshot: /images/friends/lf_ss.jpg
+      image: /images/friends/thumbs/lf_at.jpg
+    # - name: caiwen
+    #   link: https://www.caiwen.work/
+    #   avatar: https://www.caiwen.work/img/avatar.webp
+    #   descr: 算法/计算机领域巨佬
+    #   siteshot: /images/friends/cw_ss.jpg
+    - name: 快乐的一天
+      link: https://fzsz.win/
+      avatar: /images/friends/hp_at.jpg
+      descr: 天才少年
+      siteshot: /images/friends/hp_ss.jpg
+      image: /images/friends/thumbs/hp_at.jpg
+
+
+- class_name: 运维
+  class_desc: 运维相关
+  link_list:
+    - name: iceyear
+      link: https://blog.iceyear.eu.org/
+      avatar: https://blog.iceyear.eu.org/img/avatar_hu_a03d367ff590d53f.webp
+      descr: 运维
+      siteshot: /images/friends/iy_ss.jpg
+      image: /images/friends/thumbs/iy_ss.jpg
+
+- class_name: 其他
+  class_desc: 其他优秀博客
+  link_list:
+    - name: yiouf1ow
+      link: https://yiouf1ow.github.io/
+      avatar: /images/friends/pj_at.jpg
+      descr: 保研&国奖部
+      siteshot: /images/friends/pj_ss.jpg
+      image: /images/friends/thumbs/pj_at.jpg
+      
