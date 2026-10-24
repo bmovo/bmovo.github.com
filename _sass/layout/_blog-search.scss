@@ -1,9 +1,43 @@
 /* Blog search shares the archive's typography and theme colors. */
 .blog-search {
-  margin: 1.5em 0 2em;
+  margin: 1em 0 2em;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
+    margin-bottom: 0.5em;
+
+    .page__title {
+      margin: 0;
+    }
+  }
+
+  &__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 0.5em 0.7em;
+    font-size: $type-size-6;
+    color: var(--global-text-color);
+    background: transparent;
+    border: 1px solid var(--global-border-color);
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    &:hover,
+    &[aria-expanded="true"] {
+      background: var(--global-footer-bg-color);
+    }
+  }
 
   &[hidden],
-  [hidden] {
+  [hidden],
+  &__toggle[hidden] {
     display: none;
   }
 
@@ -48,7 +82,8 @@
   }
 
   input[type="search"]:focus-visible,
-  &__clear:focus-visible {
+  &__clear:focus-visible,
+  &__toggle:focus-visible {
     outline: 2px solid var(--global-link-color);
     outline-offset: 2px;
   }

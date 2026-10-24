@@ -17,7 +17,15 @@ layout: default
 
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
+      {% if page.blog_search %}<div class="blog-search__heading">{% endif %}
       <h1 class="page__title">{{ page.title }}</h1>
+      {% if page.blog_search %}
+        <button id="blog-search-toggle" class="blog-search__toggle" type="button" aria-expanded="false" aria-controls="blog-search-panel" hidden>
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <span>搜索</span>
+        </button>
+      </div>
+      {% endif %}
     {% endunless %}
     {{ content }}
   </div>

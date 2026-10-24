@@ -2,7 +2,8 @@
   "use strict";
 
   var search = document.querySelector("[data-blog-search]");
-  if (!search) return;
+  var toggle = document.getElementById("blog-search-toggle");
+  if (!search || !toggle) return;
 
   var input = search.querySelector("input");
   var clear = search.querySelector("button");
@@ -13,6 +14,21 @@
   var requestVersion = 0;
   var debounce;
   var composing = false;
+
+  function setOpen(open) {
+    search.hidden = !open;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.querySelector("span").textContent = open ? "收起搜索" : "搜索";
+    if (open) {
+      input.focus();
+    } else {
+      clearTimeout(debounce);
+      composing = false;
+      input.value = "";
+      update(); // Invalidate pending requests and restore the yearly archive.
+      toggle.focus();
+    }
+  }
 
   function plainText(value) {
     // Jekyll strips tags but preserves HTML entities. Decode in an inert document;
@@ -139,6 +155,7 @@
   }
 
   function schedule() {
+    if (search.hidden) return;
     clearTimeout(debounce);
     ++requestVersion; // Invalidate in-flight results as soon as the query changes.
     clear.disabled = input.value.length === 0;
@@ -150,6 +167,15 @@
     if (!composing) {
       clearTimeout(debounce);
       update();
+    }
+  });
+  toggle.addEventListener("click", function () {
+    setOpen(search.hidden);
+  });
+  search.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !composing && !event.isComposing) {
+      event.preventDefault();
+      setOpen(false);
     }
   });
   input.addEventListener("input", schedule);
@@ -168,5 +194,5 @@
     update();
     input.focus();
   });
-  search.hidden = false;
+  toggle.hidden = false;
 })();

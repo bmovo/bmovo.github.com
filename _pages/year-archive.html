@@ -3,13 +3,14 @@ layout: archive
 permalink: /year-archive/
 title: "Blog posts"
 author_profile: true
+blog_search: true
 redirect_from:
   - /wordpress/blog-posts/
 ---
 
 {% include base_path %}
 
-<section class="blog-search" data-blog-search data-index-url="{{ '/search.json' | relative_url }}" hidden>
+<section id="blog-search-panel" class="blog-search" data-blog-search data-index-url="{{ '/search.json' | relative_url }}" hidden>
   <form class="blog-search__form" role="search">
     <label for="blog-search-input">搜索博客</label>
     <div class="blog-search__controls">

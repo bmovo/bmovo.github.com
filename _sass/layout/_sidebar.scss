@@ -305,6 +305,11 @@
 
   li {
     white-space: nowrap;
+
+    &.author__desktop {
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
   }
 
   a {
